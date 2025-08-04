@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ocean-50: 240 249 255;
+    --ocean-100: 224 242 254;
+    --ocean-200: 186 230 253;
+    --ocean-300: 125 211 252;
+    --ocean-400: 56 189 248;
+    --ocean-500: 14 165 233;
+    --ocean-600: 2 132 199;
+    --ocean-700: 3 105 161;
+    --ocean-800: 7 89 133;
+    --ocean-900: 12 74 110;
+    
+    --sand-50: 254 253 248;
+    --sand-100: 254 251 240;
+    --sand-200: 253 245 217;
+    --sand-300: 251 234 194;
+    --sand-400: 247 211 148;
+    --sand-500: 243 188 102;
+    --sand-600: 219 159 61;
+    --sand-700: 184 133 61;
+    --sand-800: 149 107 61;
+    --sand-900: 122 88 50;
+  }
+  
+  body {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-ocean-600 to-ocean-800 bg-clip-text text-transparent;
+  }
+  
+  .wave-bg {
+    background: linear-gradient(135deg, rgb(14 165 233) 0%, rgb(2 132 199) 50%, rgb(3 105 161) 100%);
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .surf-rating-poor {
+    @apply text-red-600 bg-red-50 border-red-200;
+  }
+  
+  .surf-rating-fair {
+    @apply text-orange-600 bg-orange-50 border-orange-200;
+  }
+  
+  .surf-rating-good {
+    @apply text-yellow-600 bg-yellow-50 border-yellow-200;
+  }
+  
+  .surf-rating-excellent {
+    @apply text-green-600 bg-green-50 border-green-200;
+  }
+  
+  .surf-rating-epic {
+    @apply text-purple-600 bg-purple-50 border-purple-200;
+  }
+}
